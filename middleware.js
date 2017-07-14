@@ -128,7 +128,7 @@ module.exports = function(options) {
 
     var path = url.parse(req.url).pathname;
 
-    if (!/\.css$/.test(path)) {
+    if (!/\.s?css$/.test(path)) {
       log('debug', 'skip', path, 'nothing to do');
       return next();
     }
